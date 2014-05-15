@@ -6,7 +6,7 @@ backdest=/opt/backup
 
 # Labels for backup name
 #PC=${HOSTNAME}
-pc=pavilion
+pc=hp14
 distro=arch
 type=full
 date=$(date "+%F")
@@ -14,8 +14,8 @@ backupfile="$backdest/$distro-$type-$date.tar.gz"
 
 # Exclude file location
 prog=${0##*/} # Program name from filename
-excdir="/home/<user>/.bin/root/backup"
-exclude_file="$excdir/$prog-exc.txt"
+excdir="/home/veltall/.scripts"
+exclude_file="$excdir/backup_exclude"
 
 # Check if chrooted prompt.
 echo -n "First chroot from a LiveCD.  Are you ready to backup? (y/n): "
